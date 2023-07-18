@@ -60,25 +60,25 @@
             var totalNum = parseFloat(banglaNum + englishNum + mathNum + physicsNum + chemistryNum + biologyNum);
             var avrg = parseFloat(totalNum / 6);
 
-            if (avrg >= 80 && avrg <= 100 &&   banglaNum >= 33 &&    englishNum >= 33 &&    mathNum >= 33 &&   physicsNum >= 33 &&   chemistryNum >= 33 &&   biologyNum >= 33) {
-                document.getElementById("result").innerHTML = "A+";
-            }
-            else if (avrg >= 80 && avrg <= 100 &&   banglaNum >= 33 &&    englishNum >= 33 &&    mathNum >= 33 &&   physicsNum >= 33 &&   chemistryNum >= 33 &&   biologyNum >= 33) {
-                document.getElementById("result").innerHTML = "A";
-            }
-            else if (avrg >= 80 && avrg <= 100 &&   banglaNum >= 33 &&    englishNum >= 33 &&    mathNum >= 33 &&   physicsNum >= 33 &&   chemistryNum >= 33 &&   biologyNum >= 33) {
-                document.getElementById("result").innerHTML = "A-";
-            }
-            else if (avrg >= 80 && avrg <= 100 &&   banglaNum >= 33 &&    englishNum >= 33 &&    mathNum >= 33 &&   physicsNum >= 33 &&   chemistryNum >= 33 &&   biologyNum >= 33) {
-                document.getElementById("result").innerHTML = "B";
-            }
-            else if (avrg >= 80 && avrg <= 100 &&   banglaNum >= 33 &&    englishNum >= 33 &&    mathNum >= 33 &&   physicsNum >= 33 &&   chemistryNum >= 33 &&   biologyNum >= 33) {
-                document.getElementById("result").innerHTML = "C";
-            }
-            else {
-                document.getElementById("result").innerText = "Fail";
-            }
-        }
+            if (avrg >= 80 && avrg <= 100 && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 && banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33 ) {
+        document.getElementById("result").innerHTML = "A+";
+    }
+    else if (avrg >= 70 && avrg < 80 && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 &&  banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33) {
+        document.getElementById("result").innerHTML = "A";
+    }
+    else if (avrg >= 60 && avrg < 70  && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 && banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33) {
+        document.getElementById("result").innerHTML = "A-";
+    }
+    else if (avrg >= 50 && avrg < 60 && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 &&  banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33)  {
+        document.getElementById("result").innerHTML = "B";
+    }
+    else if (avrg >= 33 && avrg < 50 && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 &&  banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33) {
+        document.getElementById("result").innerHTML = "C";
+    }
+    else {
+        document.getElementById("result").innerText = "Fail";
+    }
+}
     </script>
 </body>
 

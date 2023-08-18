@@ -584,17 +584,22 @@ footer {
     /* navbar */
     .navbar-nav a {
         color: white !important;
-        position: fixed;
+        position: relative;
+
     }
 
     .navbar {
         position: fixed;
+        top: 0;
+        min-width: 107vw;
+        z-index: 34;
     }
 
     .navbar-toggler {
-        right: -10px !important;
-        border: none !important;
-        position: fixed;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     .navbar-toggler:focus {

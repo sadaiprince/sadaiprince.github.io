@@ -7,30 +7,50 @@
 
 }
 
-/* scroll bar  */
+/* scrollbar */
 ::-webkit-scrollbar {
-    background: linear-gradient(#FCFFB2, rgb(108, 108, 219));
-    width: .7rem
+    width: 1rem;
+    background: linear-gradient(#FCFFB2, tomato);
+    border-radius: 23px;
+
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 23px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(rgba(183, 0, 255, 0), rgb(104, 104, 248));
-    border-radius: 1rem;
+    background: linear-gradient(#FCFFB2, tomato);
+    border-radius: 23px;
+}
+
+/* preloader */
+#preloader {
+    background: #000000 url("asset/preloader1.gif") no-repeat center center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    transition: 1s ease;
 }
 
 .topNav {
-    background-color: #FCFFB2;
+    position: fixed;
 }
 
 .navbar {
-    background-color: #FCFFB2;
+    background: rgba(217, 193, 248, 0.425);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(153, 89, 236, 0.18);
     width: 100vw;
     height: 3rem;
-    position: sticky, -webkit-sticky;
+    position: fixed;
     border-bottom: 1px double black;
     border-end-end-radius: 12px;
     margin-left: -1.7rem;
-    position: -webkit-sticky, sticky !important;
 }
 
 .navbar .navbar-brand {
@@ -39,7 +59,7 @@
     font-weight: bolder;
     font-size: 1.5rem;
     letter-spacing: -2px;
-    color: #00235B;
+    color: #ffffffbe;
 
 }
 
@@ -47,7 +67,7 @@
     content: "";
     width: 0;
     height: 5px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: block;
     margin: auto;
     border-bottom: 3px solid #B6EAFA;
@@ -60,15 +80,20 @@
 }
 
 .navbar .navbar-brand:hover {
-    color: #00235B;
+    color: #ffffff;
 }
 
 .navbar-toggler {
-    background-color: #FCFFB2;
+    background: rgba(119, 204, 176, 0.301);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .navbar-nav {
-    background-color: #ff000000;
+    background-color: transparent;
 }
 
 .nav-item {
@@ -100,7 +125,7 @@
 .heroSection {
     min-width: 100%;
     min-height: 40rem;
-    background-image: url('asset/particle200.gif');
+    background-image: url('asset/particle.gif');
     background-repeat: repeat;
     object-fit: cover;
 }
@@ -346,10 +371,38 @@
 /* portfolio */
 #portfolio {
     width: 100%;
-    height: 65rem;
+    height: 100rem;
     background-color: black;
     position: relative;
     padding-bottom: 5rem;
+}
+
+#portfolio .old iframe {
+    width: 70%;
+    height: 170%;
+    display: block;
+    margin: auto;
+    left: 50%;
+    transition: .3s;
+}
+
+#portfolio .old img:hover {
+    opacity: .7;
+}
+
+#portfolio .old span {
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.637);
+    padding: 15px;
+}
+
+#portfolio .old span:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    letter-spacing: 2px;
+    transition: .2s;
 }
 
 #portfolio .col-6 {
@@ -407,6 +460,7 @@
 #experience {
     width: 100%;
     background-color: black;
+    padding-top: 30rem;
 }
 
 #experience .langLogo img {
@@ -584,8 +638,12 @@ footer {
     }
 
     #portfolio a {
-        font-size: .6rem !important;
+        font-size: .32rem !important;
         color: white !important;
+    }
+
+    #portfolio .old span {
+        font-size: .32rem;
     }
 
     #experience .langLogo img {

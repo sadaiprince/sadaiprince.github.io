@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate your grade</title>
+    <style>
+        form {
+            border: 1px solid wheat;
+            background-color: rgba(31, 236, 236, 0.808);
+        }
+
+        input {
+            padding: 8px;
+            display: flex;
+            margin: auto;
+        }
+
+        label , button, p {
+            padding: 2px;
+            margin: auto;
+            display: block;
+        }
+
+        label::after {
+            content: ":";
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="text-align: center;">Enter your exam Number and see what you have earned!!</h3>
+
+    <form style="display: block; margin: auto;width: 70%;">
+        <p style="background-color: thistle; display: block; margin: 0 auto;">Your Number Must be within 0 to 100. Otherwise result will return you "Fail"</p>
+        <label for="bangla">Bangla</label>
+        <input type="number" name="bangla" id="bangla" placeholder="Enter your number">
+        <label for="english">English</label>
+        <input type="number" name="english" id="english" placeholder="Enter your number">
+        <label for="math">Math</label>
+        <input type="number" name="math" id="math" placeholder="Enter your number">
+        <label for="physics">Physics</label>
+        <input type="number" name="physics" id="physics" placeholder="Enter your number">
+        <label for="chemistry">Chemistry</label>
+        <input type="number" name="chemistry" id="chemistry" placeholder="Enter your number">
+        <label for="biology">Biology</label>
+        <input type="number" name="biology" id="biology" placeholder="Enter your number"><br>
+        <button type="button" onclick="grade()">See your grade</button>
+        <p id="result" style="display: block; margin: auto; background-color: thistle;"></p>
+    </form>
+    <script>
+        function grade() {
+            var banglaNum = parseFloat(document.getElementById("bangla").value);
+            var englishNum = parseFloat(document.getElementById("english").value);
+            var mathNum = parseFloat(document.getElementById("math").value);
+            var physicsNum = parseFloat(document.getElementById("physics").value);
+            var chemistryNum = parseFloat(document.getElementById("chemistry").value);
+            var biologyNum = parseFloat(document.getElementById("biology").value);
+            var totalNum = parseFloat(banglaNum + englishNum + mathNum + physicsNum + chemistryNum + biologyNum);
+            var avrg = parseFloat(totalNum / 6);
+
+            if (avrg >= 80 && avrg <= 100 && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 && banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33 ) {
+        document.getElementById("result").innerHTML = "A+";
+    }
+    else if (avrg >= 70 && avrg < 80 && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 &&  banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33) {
+        document.getElementById("result").innerHTML = "A";
+    }
+    else if (avrg >= 60 && avrg < 70  && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 && banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33) {
+        document.getElementById("result").innerHTML = "A-";
+    }
+    else if (avrg >= 50 && avrg < 60 && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 &&  banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33)  {
+        document.getElementById("result").innerHTML = "B";
+    }
+    else if (avrg >= 33 && avrg < 50 && banglaNum<=100 && englishNum<=100 && mathNum<=100 && physicsNum<=100 && chemistryNum<=100 && biologyNum<=100 &&  banglaNum >=33 && englishNum>=33 && mathNum >=33 && physicsNum >=33 && chemistryNum >=33 && biologyNum >=33) {
+        document.getElementById("result").innerHTML = "C";
+    }
+    else {
+        document.getElementById("result").innerText = "Fail";
+    }
+}
+    </script>
+</body>
+
+</html>

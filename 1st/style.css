@@ -26,7 +26,7 @@
 
 /* preloader */
 #preloader {
-    background: #000000 url("asset/preloader1.gif") no-repeat center center;
+    background: #000000 url("asset/sliching.gif") no-repeat center center;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -35,7 +35,9 @@
 }
 
 .topNav {
+    width: 100%;
     position: fixed;
+    z-index: 22;
 }
 
 .navbar {
@@ -48,6 +50,7 @@
     width: 100vw;
     height: 3rem;
     position: fixed;
+    z-index: 23;
     border-bottom: 1px double black;
     border-end-end-radius: 12px;
     margin-left: -1.7rem;
@@ -60,6 +63,7 @@
     font-size: 1.5rem;
     letter-spacing: -2px;
     color: #ffffffbe;
+    padding-left: 15px;
 
 }
 
@@ -580,16 +584,21 @@ footer {
     /* navbar */
     .navbar-nav a {
         color: white !important;
+        position: fixed;
+    }
+
+    .navbar {
+        position: fixed;
     }
 
     .navbar-toggler {
-        position: absolute;
         right: -10px !important;
         border: none !important;
+        position: fixed;
     }
 
     .navbar-toggler:focus {
-        border: 3px solid black !important;
+        border: 0px solid black !important;
         color: black !important;
     }
 

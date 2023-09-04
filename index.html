@@ -22,49 +22,60 @@
 </head>
 
 <body>
-    <div class="main" id="main">
-        <div class="card">
-            <img src="asset/main.png" alt="Main Portfolio">
-            <p class="heading">
-                My Portfolio Website
-            </p>
-            <p>
-                Created with love By Prince
-            </p>
-            <a href="https://sadaiprince.github.io/1st/" target="_blank">Click Here to Visit</a>
-        </div>
-        <div class="card">
+    <div class="full">
+        <div class="main" id="main">
 
-            <img src="asset/old.png" alt="Old portfolio">
-            <p class="heading">
-                My old Portfolio Website
-            </p>
-            <p>
-                Created with love By Prince
-            </p>
-            <a href="https://sadaiprince.github.io/old/" target="_blank">Click Here to Visit</a>
+            <div class="card">
+                <img src="asset/main.png" alt="Main Portfolio">
+                <p class="heading">
+                    My Portfolio Website
+                </p>
+                <p>
+                    Created with love By Prince
+                </p>
+                <a href="https://sadaiprince.github.io/1st/" target="_blank">Click Here to Visit</a>
+            </div>
+            <div class="card">
+
+                <img src="asset/old.png" alt="Old portfolio">
+                <p class="heading">
+                    My old Portfolio Website
+                </p>
+                <p>
+                    Created with love By Prince
+                </p>
+                <a href="https://sadaiprince.github.io/old/" target="_blank">Click Here to Visit</a>
+            </div>
+            <div class="card">
+                <img src="asset/grade.png" alt="Grading system">
+                <p class="heading">
+                    Grading System
+                </p>
+                <p>
+                    Created with love By Prince
+                </p>
+                <a href="https://sadaiprince.github.io/grade/" target="_blank">Click Here to Visit</a>
+            </div>
+            <div class="card">
+                <img src="asset/bubblegame.png" alt="bubblegame">
+                <p class="heading">
+                    Bubble Game
+                </p>
+                <p>
+                    Created with love By Prince
+                </p>
+                <a href="https://sadaiprince.github.io/bubbleGame/" target="_blank">Click Here to Visit</a>
+            </div>
         </div>
-        <div class="card">
-            <img src="asset/grade.png" alt="Grading system">
-            <p class="heading">
-                Grading System
-            </p>
-            <p>
-                Created with love By Prince
-            </p>
-            <a href="https://sadaiprince.github.io/grade/" target="_blank">Click Here to Visit</a>
-        </div>
-        <div class="card">
-            <img src="asset/bubblegame.png" alt="bubblegame">
-            <p class="heading">
-                Bubble Game
-            </p>
-            <p>
-                Created with love By Prince
-            </p>
-            <a href="https://sadaiprince.github.io/bubbleGame/" target="_blank">Click Here to Visit</a>
-        </div>
+        <div class="customCursor"></div>
     </div>
+    <script>
+        const mouseMove = document.querySelector(".full");
+        mouseMove.addEventListener("mousemove", function (details) {
+            document.querySelector(".customCursor").style.left = details.x + "px";
+            document.querySelector(".customCursor").style.top = details.y + "px";
+        })
+    </script>
 </body>
 
 </html>

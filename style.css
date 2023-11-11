@@ -228,6 +228,10 @@ img {
     box-shadow: inset 7px 7px 14px #a294a6,
         inset -7px -7px 14px #f2def8;
 }
+.ads1{
+    height: 200px;
+    width: 200px;
+}
 
 @media screen and (max-width : 548px) {
     body {

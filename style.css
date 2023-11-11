@@ -231,6 +231,10 @@ img {
 .ads1{
     height: 200px;
     width: 200px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 @media screen and (max-width : 548px) {

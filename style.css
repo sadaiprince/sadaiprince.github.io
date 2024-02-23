@@ -133,17 +133,6 @@ img {
     box-shadow: inset 7px 7px 14px #a294a6,
         inset -7px -7px 14px #f2def8;
 }
-.footer{
-    position: absolute;
-    bottom: 0px;
-    
-    /* bottom: 0;
-    left: 50%;
-    transform: translate(-50%,-50%); */
-    background-color: #fff;
-    font-size: 1.4em;
-    font-family:Tahoma, sans-serif;
-}
 
 @media screen and (max-width : 548px) {
     .full{
@@ -234,12 +223,6 @@ img {
 
     box-shadow: inset 7px 7px 14px #a294a6,
         inset -7px -7px 14px #f2def8;
-}
-.footer{
-    display: inline;
-    margin: 0 auto;
-    float: left;
-    bottom: 0;
 }
 }
 

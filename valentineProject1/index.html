@@ -31,23 +31,23 @@
         let no = document.querySelector(".no");
         let yes = document.querySelector(".yes");
         let parentBlock = no.parentElement;
+        
+        no.addEventListener('mouseover', () => {
+            const positionX = Math.ceil(Math.random() * (parentBlock.clientWidth - no.clientWidth));
+            console.log(positionX);
+            const positionY = Math.floor(Math.random() * (parentBlock.clientHeight - no.clientHeight));
+            console.log(positionY);
+            no.style.position = "absolute";
+            no.style.left = `${positionX}px`;
+            no.style.top = `${positionY}px`;
+
+        });
         yes.addEventListener('click', () => {
             document.querySelector(".wrapper").style.display = "none";
             document.querySelector(".congrates").style.display = "block";
             document.querySelector(".congrates").style.display = "flex";
             
-        })
-        no.addEventListener('mouseover', () => {
-            const positionX = Math.floor(Math.random() * (parentBlock.clientWidth - no.clientWidth));
-            console.log(positionX)
-            const positionY = Math.floor(Math.random() * (parentBlock.clientHeight - no.clientHeight));
-            console.log(positionY)
-            no.style.position = "absolute";
-            no.style.left = `${positionX}px`;
-            no.style.top = `${positionY}px`;
-
-        })
-
+        });
     </script>
 </body>
 

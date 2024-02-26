@@ -12,13 +12,13 @@
 <body>
     <div class="container-fluid main">
         <div class="container wrapper">
-                <div class="container heading">
+                
                     <h1>Do you like me?</h1>
-                </div>
-            <div class="container buttonSection">
+                
+                <div class="buttonSection">
                 <button class="yes">Yes</button>
                 <button class="no">No</button>
-            </div>
+                </div>
         </div>
     </div>
     </div>
@@ -26,16 +26,16 @@
     <script>
         let no=document.querySelector(".no");
         let yes=document.querySelector(".yes");
-    let ran=Math.random()*1000;
-    console.log(ran);
-    
-        no.addEventListener('click', (ck)=>{
+        let parentBlock=no.parentElement;
+        no.addEventListener('mouseover', ()=>{
+            const positionX = Math.floor(Math.random() * (parentBlock.clientWidth - no.clientWidth));
+            console.log(positionX)
+            const positionY = Math.floor(Math.random() * (parentBlock.clientHeight - no.clientHeight));
+            console.log(positionY)
             no.style.position = "absolute";
-            
-            no.style.left = ran+"px";
-            no.style.top = ran+ "px";
-        
-            console.log(ck);
+            no.style.left=`${positionX}px`;
+            no.style.top=`${positionY}px`;
+           
         })
     
     </script>

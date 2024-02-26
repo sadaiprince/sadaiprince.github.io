@@ -12,32 +12,42 @@
 <body>
     <div class="container-fluid main">
         <div class="container wrapper">
-                
-                    <h1>Do you like me?</h1>
-                
-                <div class="buttonSection">
+
+            <h1>Do you like me?</h1>
+
+            <div class="buttonSection">
                 <button class="yes">Yes</button>
                 <button class="no">No</button>
-                </div>
+            </div>
         </div>
-    </div>
+        <div class="congrates">
+            
+            <h1>You Must Like Me! <br> Because I am Your PRinCE 😎</h1>
+
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        let no=document.querySelector(".no");
-        let yes=document.querySelector(".yes");
-        let parentBlock=no.parentElement;
-        no.addEventListener('mouseover', ()=>{
+        let no = document.querySelector(".no");
+        let yes = document.querySelector(".yes");
+        let parentBlock = no.parentElement;
+        yes.addEventListener('click', () => {
+            document.querySelector(".wrapper").style.display = "none";
+            document.querySelector(".congrates").style.display = "block";
+            document.querySelector(".congrates").style.display = "flex";
+            
+        })
+        no.addEventListener('mouseover', () => {
             const positionX = Math.floor(Math.random() * (parentBlock.clientWidth - no.clientWidth));
             console.log(positionX)
             const positionY = Math.floor(Math.random() * (parentBlock.clientHeight - no.clientHeight));
             console.log(positionY)
             no.style.position = "absolute";
-            no.style.left=`${positionX}px`;
-            no.style.top=`${positionY}px`;
-           
+            no.style.left = `${positionX}px`;
+            no.style.top = `${positionY}px`;
+
         })
-    
+
     </script>
 </body>
 

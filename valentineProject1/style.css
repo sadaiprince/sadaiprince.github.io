@@ -29,7 +29,7 @@
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-
+    
 }
 
 h1 {
@@ -49,11 +49,39 @@ button {
     margin: 4px;
     padding: 9px 25px;
     border-radius: 9px;
-    background: rgba(134, 223, 144, 0.447);
+    background: rgba(40, 213, 60, 0.447);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.761);
     font-size: 1.1rem;
+    transition: ease-out .15s;
+    cursor: pointer;
 }
+
+.congrates{
+    background: url(heart-493_512.gif) repeat;
+    background-size: contain;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: none;
+    
+}
+.congrates h1{
+    background: rgba(255, 255, 255, 0.447);
+    box-shadow: 0 8px 32px 0 rgba(191, 192, 206, 0.684);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 10px;
+    border: 1px solid rgba(157, 71, 71, 0.761)
+}
+
+

@@ -31,17 +31,27 @@
         let no = document.querySelector(".no");
         let yes = document.querySelector(".yes");
         let parentBlock = no.parentElement;
-        
-        no.addEventListener('touchstart', () => {
-            const positionX = Math.ceil(Math.random() * (parentBlock.clientWidth - no.clientWidth));
-            console.log(positionX);
-            const positionY = Math.floor(Math.random() * (parentBlock.clientHeight - no.clientHeight));
-            console.log(positionY);
+        // for mobile divice
+        if(window.innerWidth < 768) {
+            no.addEventListener('touchstart', () => {
+                let positionXm = Math.ceil(Math.random() * (parentBlock.clientWidth - no.clientWidth));
+                let positionYm = Math.floor(Math.random() * (parentBlock.clientHeight - no.clientHeight));
+                no.style.position = "absolute";
+                no.style.left = `${positionXm}px`;
+                no.style.top = `${positionYm}px`;
+
+            })
+        }
+        //for desktop
+        no.addEventListener('mousemove', () => {
+            let positionX = Math.ceil(Math.random() * (parentBlock.clientWidth - no.clientWidth));
+            let positionY = Math.floor(Math.random() * (parentBlock.clientHeight - no.clientHeight));
             no.style.position = "absolute";
             no.style.left = `${positionX}px`;
             no.style.top = `${positionY}px`;
 
         });
+        // yes button function 
         yes.addEventListener('click', () => {
             document.querySelector(".wrapper").style.display = "none";
             document.querySelector(".congrates").style.display = "block";

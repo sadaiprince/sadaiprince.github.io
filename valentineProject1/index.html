@@ -32,7 +32,7 @@
         let yes = document.querySelector(".yes");
         let parentBlock = no.parentElement;
         
-        no.addEventListener('mouseover', () => {
+        no.addEventListener('touchstart', () => {
             const positionX = Math.ceil(Math.random() * (parentBlock.clientWidth - no.clientWidth));
             console.log(positionX);
             const positionY = Math.floor(Math.random() * (parentBlock.clientHeight - no.clientHeight));

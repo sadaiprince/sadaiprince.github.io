@@ -67,7 +67,7 @@
 .choice .yes,.no{
     background-color: rgb(91, 213, 91);
     position: relative;
-    
+    cursor: pointer;
     padding: 23px;
     border: 1px solid white;
     border-radius: 15px;

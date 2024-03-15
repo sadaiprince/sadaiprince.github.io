@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: crt;
+}
+
+@font-face {
+    font-family: crt;
+    src: url(AdvancedPixelLcd7-yGOq.ttf);
+
+}
+
+body {
+    background: url("/1st/asset/preloader1.gif");
+    background-size: contain;
+    background-repeat:repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clock {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 230%;
+    background: rgba(213, 193, 233, 0.122);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(34px);
+    -webkit-backdrop-filter: blur(110px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 254, 254, 0.684);
+}
+.m,.s,.ms,.h{
+    text-shadow:rgb(28, 13, 13) 1px 2px 0px, rgb(106, 45, 218) -1px -4px 3px, rgb(44, 12, 12) 4px 0px 0px, rgba(37, 219, 43, 0.781) -4px 0px 0px;
+}
+.h{
+    color: rgb(255, 255, 255);
+}
+.m {
+    color: rgb(255, 255, 255);
+}
+
+.s {
+    color: rgb(255, 255, 255);
+}
+
+.ms {
+    color: rgb(8, 255, 255);
+}

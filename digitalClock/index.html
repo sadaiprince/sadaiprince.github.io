@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showTime()">
+  <span class="clock">
+    <span class="h"></span>
+    <span class="m"></span>
+    <span class="s"></span>
+    <span class="ms"></span>
+  </span>
+
+  <script>
+    function showTime() {
+      // Create a Date object once for efficiency
+      const d = new Date();
+
+      // Get hours, minutes, seconds, and milliseconds
+      const h = d.getHours();
+      const m = d.getMinutes();
+      const s = d.getSeconds();
+      const ms = d.getMilliseconds();
+
+      // Format and display time elements
+      document.querySelector(".h").textContent = (h >= 12 ? h - 12 : h).toString().padStart(2, "0") + ":";
+      document.querySelector(".m").textContent = m.toString().padStart(2, "0") + ":";
+      document.querySelector(".s").textContent = s.toString().padStart(2, "0") + ":"; // Added ":" for consistency
+      document.querySelector(".ms").textContent = ms.toString().padStart(3, "0");
+
+      // Schedule the next update for the next full second
+      setTimeout(showTime, 1); // Delay until the next full second
+    }
+
+  </script>
+</body>
+</html>

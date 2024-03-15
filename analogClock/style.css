@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.container {
+    position: relative;
+    height: 70vw;
+    width: 70vw;
+    box-shadow: 0 0 90px rgba(28, 221, 31, 0.857), 1px 23px 44px 23px rgb(147, 21, 197),-1px -23px 44px rgb(154, 15, 45);
+    background-image: url("/asset/clock.jpg");
+    background-color: #531616; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+p{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: white;
+    transform: translate(-50% ,-50%);
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.h,.m,.s{
+    position: absolute;
+    border-radius: 40px;
+    transform-origin: bottom;
+}
+.h{
+    height: 25%;
+    width: 2.3%;
+    background-color: rgb(34, 13, 139);
+    top: 26%;
+    left: 48.865%;
+}
+.m{
+    height: 29%;
+    width: 1.6%;
+    background-color: rgb(28, 105, 205);
+    top: 22%;
+    left: 49.2%;
+    
+}
+.s{
+    height: 33%;
+    width: 1.1%;
+    background-color: rgb(235, 30, 30);
+    top: 17.1%;
+    left: 49.6%;
+   
+}
+.s::before{
+    content: "";
+    background-color: black;
+    height: 13%;
+    width: 400%;
+    border-radius: 50%;
+    position: absolute;
+    top: 92%;
+    left: -130%;
+
+}
+@media screen and (min-width:1190px) {
+    .container {
+        position: relative;
+        height: 70vh;
+        width: 70vh;
+    }
+}

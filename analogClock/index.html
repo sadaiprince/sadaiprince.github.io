@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="h"></div>
+        <div class="m"></div>
+        <div class="s"></div>
+    </div>
+<p>Created with ❤ by PRinCE⚜</p>
+    <!-- js part -->
+    <script>
+        setInterval(() => {
+            d=new Date();
+            h=d.getHours();
+            m=d.getMinutes();
+            s=d.getSeconds();
+            document.querySelector(".h").style.transform=`rotate(${30*h + m/2}deg)`;
+            document.querySelector(".m").style.transform=`rotate(${6*m}deg)`;
+            document.querySelector(".s").style.transform=`rotate(${6*s}deg)`;
+        }, 1000);
+    </script>
+</body>
+</html>

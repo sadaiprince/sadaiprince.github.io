@@ -58,3 +58,12 @@ body {
 .ms {
     color: rgb(8, 255, 255);
 }
+p{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: white;
+    transform: translate(-50% ,-50%);
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+}

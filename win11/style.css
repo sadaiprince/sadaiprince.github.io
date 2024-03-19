@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.lockScreen{
+    height: 100vh !important;
+    width: 100vw;
+    background-image: url(assets/lockScreenWallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.lockClock{
+    transition:all .5s ease-in-out;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    top: 20%;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    
+    
+}
+.lockClock .dates{
+    font-size: 2rem;
+}
+/* go to sign in */
+.signInToWindows{
+    transition:all .4s ease-in-out !important;
+    display: block;
+    height: 40vh;
+    width: 40vh;
+    position: relative;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    display: none;
+    
+    
+    
+}
+.signInToWindows img{
+    transition:all .4s ease-in-out !important ;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+    border: 2px solid white;
+    
+}
+.signInToWindows button{
+    padding: .7em 1.3em;
+    outline:none;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.404);
+    cursor: pointer;
+    margin-top: 1em;
+    font-size: .7em;
+    font-weight: 400;
+    color: whitesmoke;
+}
+/* remove lock Screen on click */
+.removeLockScreen{
+    transition: all .2s ease-in-out !important;
+    height: 0;
+    width: 0;
+    position: relative;
+    
+}

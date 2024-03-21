@@ -39,13 +39,13 @@ function showTime() {
     }
     // Format and display time elements
     //for lockscreen time and date
-    document.querySelectorAll(".m")[1].textContent = m.toString().padStart(2, "0") + ":";
+    document.querySelectorAll(".m")[1].textContent = m.toString().padStart(2, "0") + " :";
     document.querySelectorAll(".h")[1].textContent = (h >= 13 ? h - 12 : h).toString().padStart(2, "0") + " :";
     document.querySelectorAll(".s")[1].textContent = s.toString().padStart(2, "0");
     document.querySelectorAll(".interval")[1].textContent = interval;
     document.querySelectorAll(".dates")[1].textContent = day + " , " + currentMonthText + " " + date;
     //for taskbar time and date
-    document.querySelectorAll(".m")[0].textContent = m.toString().padStart(2, "0") + ":";
+    document.querySelectorAll(".m")[0].textContent = m.toString().padStart(2, "0") + " :";
     document.querySelectorAll(".h")[0].textContent = (h >= 13 ? h - 12 : h).toString().padStart(2, "0") + " :";
     document.querySelectorAll(".s")[0].textContent = s.toString().padStart(2, "0");
     setTimeout(showTime, 1000);
@@ -64,7 +64,7 @@ removeLockScreen.addEventListener('click', () => {
 })
 
 // disable right click
-homeScreen.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
 // lock Screen remove in click
 
 document.querySelector(".signInBtn").addEventListener("click", () => {

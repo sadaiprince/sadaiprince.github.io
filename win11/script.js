@@ -4,8 +4,8 @@ function showTime() {
     // Get hours, minutes
     const h = d.getHours();
     const m = d.getMinutes();
+    const s =d.getSeconds();
     const date = d.getDate();
-    const month = d.getMonth();
     var day = d.getDay();
     //AM or PM
     var interval;
@@ -38,27 +38,35 @@ function showTime() {
 
     }
     // Format and display time elements
-    document.querySelector(".h").textContent = (h >= 13 ? h - 12 : h).toString().padStart(2, "0") + " :";
-    document.querySelector(".m").textContent = m.toString().padStart(2, "0");
-    document.querySelector(".interval").textContent = interval;
-    document.querySelector(".dates").textContent = day + " , " + currentMonthText + " " + date;
+    //for lockscreen time and date
+    document.querySelectorAll(".m")[1].textContent = m.toString().padStart(2, "0") + ":";
+    document.querySelectorAll(".h")[1].textContent = (h >= 13 ? h - 12 : h).toString().padStart(2, "0") + " :";
+    document.querySelectorAll(".s")[1].textContent = s.toString().padStart(2, "0");
+    document.querySelectorAll(".interval")[1].textContent = interval;
+    document.querySelectorAll(".dates")[1].textContent = day + " , " + currentMonthText + " " + date;
+    //for taskbar time and date
+    document.querySelectorAll(".m")[0].textContent = m.toString().padStart(2, "0") + ":";
+    document.querySelectorAll(".h")[0].textContent = (h >= 13 ? h - 12 : h).toString().padStart(2, "0") + " :";
+    document.querySelectorAll(".s")[0].textContent = s.toString().padStart(2, "0");
     setTimeout(showTime, 1000);
 }
 showTime();
 //    ----------------------------
 // before the window home screen
+var homeScreen=document.querySelector(".homeScreen");
 var removeLockScreen = document.querySelector(".lockScreen");
-removeLockScreen.addEventListener('click', ()=>{
-removeLockScreen.style.backgroundImage = "url('assets/bluredLockScreenWallpaper.jpg')";
-    document.querySelector(".lockClock").style.display="none";
-    document.querySelector(".signInToWindows").style.display="block";
-    
+removeLockScreen.addEventListener('click', () => {
+    removeLockScreen.style.transition = "all" + " .2s " + "ease-in-out";
+    document.querySelector(".lockClock").style.top = "-100vh";
+    document.querySelector(".signInToWindows").style.top = "50%";
+    // clearTimeout(setTime);
 
 })
+
+// disable right click
+homeScreen.addEventListener('contextmenu', event => event.preventDefault());
 // lock Screen remove in click
- 
-    document.querySelector(".signInBtn").addEventListener("click",()=>{
-        removeLockScreen.classList.add("removeLockScreen");
-        
-        document.querySelector(".signInToWindows img").style.display="none";
-    })
+
+document.querySelector(".signInBtn").addEventListener("click", () => {
+    removeLockScreen.classList.add("removeLockScreen");
+});

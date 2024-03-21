@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windows 11 by aiPRinCE</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body >
-    <div class="lockScreen" >
+
+<body>
+    <!-- Home screen section -->
+    <div class="homeScreen">
+        <div class="wallpaper"><img src="assets/bg.jpeg" alt=""></div>
+        <div class="taskbar">
+            <div class="icon"><img src="assets/windows11.png" alt="wallpaper"></div>
+            <div class="icon"><img src="assets/search.png" alt="search"></div>
+            <div class="icon"><img src="assets/setting.png" alt="setting"></div>
+            <div class="icon"><img src="assets/file-explorer.png" alt="file-explorer"></div>
+            <div class="icon"><img src="assets/microsoft-edge.png" alt="microsoft-edge"></div>
+            <div class="icon"><img src="assets/microsoft-store.png" alt="microsoft-store"></div>
+            <div class="rightSideTaskbar">
+                <img class="" src="assets/chevron-up.png" alt="chevron-up">
+                <span class="wifi-volume">
+                    <img src="assets/wi-fi.png" alt="wi-fi"><img src="assets/volume.png" alt="volume">
+                </span>
+                <div class="clockIntaskbar clock">
+                    <span class="h">hour</span>
+                    <span class="m">min</span>
+                    <span class="s">sec</span>
+                    <span class="interval"></span>
+                    </span><br>
+                    <span class="dates"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Lock screen function -->
+    <div class="lockScreen">
         <div class="lockClock">
             <span class="clock">
-                <span class="h"></span>
-                <span class="m"></span>
+                <span class="h">h</span>
+                <span class="m">m</span>
+                <span class="s">s</span>
                 <span class="interval"></span>
-              </span><br>
-              <span class="dates"></span>  
-            
+            </span><br>
+            <span class="dates"></span>
+
         </div>
         <div class="signInToWindows">
-                <img src="assets/profile-pic.png" alt="profile-pic">
-                <div>MD. Arif Istiack PRinCE</div >
-                <button class="signInBtn">Sign in</button>
-            </div>   
+            <img src="assets/profile-pic.png" alt="profile-pic">
+            <div>MD. Arif Istiack PRinCE</div>
+            <button class="signInBtn">Sign in</button>
+        </div>
     </div>
+    <!-- --------------------------------- -->
+
+
     <!-- js section -->
     <script src="script.js"></script>
 </body>
+
 </html>

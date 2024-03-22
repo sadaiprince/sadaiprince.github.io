@@ -4,7 +4,7 @@ function showTime() {
     // Get hours, minutes
     const h = d.getHours();
     const m = d.getMinutes();
-    const s =d.getSeconds();
+    const s = d.getSeconds();
     const date = d.getDate();
     var day = d.getDay();
     //AM or PM
@@ -53,7 +53,7 @@ function showTime() {
 showTime();
 //    ----------------------------
 // before the window home screen
-var homeScreen=document.querySelector(".homeScreen");
+var homeScreen = document.querySelector(".homeScreen");
 var removeLockScreen = document.querySelector(".lockScreen");
 removeLockScreen.addEventListener('click', () => {
     removeLockScreen.style.transition = "all" + " .2s " + "ease-in-out";
@@ -70,3 +70,69 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 document.querySelector(".signInBtn").addEventListener("click", () => {
     removeLockScreen.classList.add("removeLockScreen");
 });
+//window menu popup on window button click
+let winLogo = document.querySelector(".winLogo");
+winLogo.addEventListener("click", () => {
+    let windowMenu = document.querySelector(".windowMenu");
+    windowMenu.style.top = windowMenu.style.top === "60%" ? "135%" : "60%";
+})
+
+//power menu popup on power btn click
+let powerBtn = document.querySelector(".powerMenu");
+powerBtn.addEventListener("click", () => {
+    let powerPopUp = document.querySelector(".powerPopUp");
+    powerPopUp.style.display = powerPopUp.style.display === "block" ? "none" : "block";
+})
+
+//adding click function on apps
+//ms-edge
+let cross=document.querySelector(".cross");
+let minus=document.querySelector(".minus");
+let full = document.querySelector(".full");
+var edgeFlag = 0;
+let msEdgeLogo = document.querySelectorAll(".edgeLogo");
+let msEdge = document.querySelector(".edgeWindow");
+let msIframe=document.querySelector(".msIframe");
+    msEdgeLogo.forEach(Element =>{
+        Element.addEventListener('click', () => {
+            if(edgeFlag==0){
+            msEdge.classList.remove("showFullWindow");
+            msIframe.classList.add("showWindow");
+            msEdge.classList.add("frame");
+            edgeFlag = 1;
+            cross.addEventListener("click", function(event) {
+                if (edgeFlag==1) {
+                    msIframe.classList.remove("showWindow");
+                    msEdge.classList.remove("frame");
+                    edgeFlag = 0;
+                }
+              });
+              minus.addEventListener("click", function(event) {
+                if (edgeFlag==1) {
+                    msIframe.classList.remove("showWindow");
+                    msEdge.classList.remove("frame");
+                    edgeFlag = 0;
+                }
+              });
+              full.addEventListener("click", function(event) {
+                if (edgeFlag==1) {
+                    msIframe.classList.remove("showWindow");
+                    msIframe.classList.add("showFrameFullWindow");
+                    msEdge.classList.add("showFullWindow"); 
+                }
+              });
+              
+            }
+            else if(edgeFlag=1) {
+               msIframe.classList.remove("showWindow");
+                msEdge.classList.remove("frame");
+                
+                edgeFlag = 0;
+            }
+            
+              
+        })
+    })
+    
+    
+// ----------------------------------

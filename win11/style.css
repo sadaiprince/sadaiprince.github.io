@@ -24,7 +24,7 @@ body{
     left: 0;
     z-index: 111;
     transition:all .2s ease-in-out;
-    display: none;/*  I have to remove this for displaying lock screeen ; */
+    /* display: none; I have to remove this for displaying lock screeen ; */
 }
 .lockClock{
     transition:all .2s ease-in-out;

@@ -1,3 +1,12 @@
+
+// preloader
+let preLoader= document.querySelector(".preLoader");
+window.addEventListener("load", function () {
+    preLoader.style.display = "none";
+    preLoader.style.transition = "20ms linear all"
+  })
+
+
 // lock screen clock Selection
 function showTime() {
     const d = new Date();
@@ -54,22 +63,22 @@ showTime();
 //    ----------------------------
 // before the window home screen
 var homeScreen = document.querySelector(".homeScreen");
-var removeLockScreen = document.querySelector(".lockScreen");
-removeLockScreen.addEventListener('click', () => {
-    removeLockScreen.style.transition = "all" + " .2s " + "ease-in-out";
+var lockScreen = document.querySelector(".lockScreen");
+lockScreen.addEventListener('click', () => {
+    lockScreen.style.transition = "all" + " .2s " + "ease-in-out";
     document.querySelector(".lockClock").style.top = "-100vh";
     document.querySelector(".signInToWindows").style.top = "50%";
-    // clearTimeout(setTime);
 
 })
-
+let signIn=document.querySelector(".signInBtn");
+signIn.addEventListener("click", () => {
+    lockScreen.classList.add("removeLockScreen");
+});
 // disable right click
 document.addEventListener('contextmenu', event => event.preventDefault());
 // lock Screen remove in click
 
-document.querySelector(".signInBtn").addEventListener("click", () => {
-    removeLockScreen.classList.add("removeLockScreen");
-});
+
 //window menu popup on window button click
 let winLogo = document.querySelector(".winLogo");
 winLogo.addEventListener("click", () => {
@@ -86,53 +95,137 @@ powerBtn.addEventListener("click", () => {
 
 //adding click function on apps
 //ms-edge
-let cross=document.querySelector(".cross");
-let minus=document.querySelector(".minus");
-let full = document.querySelector(".full");
+var edgecross = document.querySelector(".edgeWindow .cross");
+var edgeminus = document.querySelector(".edgeWindow .minus");
+var edgefull = document.querySelector(".edgeWindow .full");
 var edgeFlag = 0;
 let msEdgeLogo = document.querySelectorAll(".edgeLogo");
-let msEdge = document.querySelector(".edgeWindow");
-let msIframe=document.querySelector(".msIframe");
-    msEdgeLogo.forEach(Element =>{
-        Element.addEventListener('click', () => {
-            if(edgeFlag==0){
+var msEdge = document.querySelector(".edgeWindow");
+var msIframe = document.querySelector(".msIframe");
+// window open close function
+
+
+
+// ms edge click function
+msEdgeLogo.forEach(Element => {
+    Element.addEventListener('click', () => {
+        if (edgeFlag == 0) {
             msEdge.classList.remove("showFullWindow");
             msIframe.classList.add("showWindow");
+            msIframe.style.zIndex = "2";
             msEdge.classList.add("frame");
             edgeFlag = 1;
-            cross.addEventListener("click", function(event) {
-                if (edgeFlag==1) {
+            edgecross.addEventListener("click", function (event) {
                     msIframe.classList.remove("showWindow");
                     msEdge.classList.remove("frame");
                     edgeFlag = 0;
-                }
-              });
-              minus.addEventListener("click", function(event) {
-                if (edgeFlag==1) {
+            });
+            edgeminus.addEventListener("click", function (event) {
                     msIframe.classList.remove("showWindow");
                     msEdge.classList.remove("frame");
                     edgeFlag = 0;
-                }
-              });
-              full.addEventListener("click", function(event) {
-                if (edgeFlag==1) {
+            });
+            edgefull.addEventListener("click", function (event) {
                     msIframe.classList.remove("showWindow");
                     msIframe.classList.add("showFrameFullWindow");
-                    msEdge.classList.add("showFullWindow"); 
-                }
-              });
-              
-            }
-            else if(edgeFlag=1) {
-               msIframe.classList.remove("showWindow");
-                msEdge.classList.remove("frame");
+                    msEdge.classList.add("showFullWindow");
                 
-                edgeFlag = 0;
-            }
-            
-              
-        })
-    })
-    
-    
+            });
+
+        }
+        else if (edgeFlag = 1) {
+            msIframe.classList.remove("showWindow");
+            msEdge.classList.remove("frame");
+
+            edgeFlag = 0;
+        }
+
+    });
+});
+
+// ms store click function
+var storecross = document.querySelector(".msStoreWindow .cross");
+var storeminus = document.querySelector(".msStoreWindow .minus");
+var storefull = document.querySelector(".msStoreWindow .full");
+let msStoreLogo = document.querySelectorAll(".msStoreLogo");
+var msStore = document.querySelector(".msStoreWindow");
+var msStoreIframe = document.querySelector(".msStoreIframe");
+let msStoreFlag = 0;
+msStoreLogo.forEach(Element => {
+    Element.addEventListener('click', () => {
+        if (msStoreFlag == 0) {
+            msStore.classList.remove("showFullWindow");
+            msStoreIframe.classList.add("showWindow");
+            // msStoreIframe.style.zIndex="1";
+            msStore.classList.add("frame");
+            msStoreFlag = 1;
+            storecross.addEventListener("click", function (event) {
+                    msStoreIframe.classList.remove("showWindow");
+                    msStore.classList.remove("frame");
+                    msStoreFlag = 0;
+            });
+            storeminus.addEventListener("click", function (event) {
+                msStoreIframe.classList.remove("showWindow");
+                msStore.classList.remove("frame");
+                msStoreFlag = 0;
+            });
+            storefull.addEventListener("click", function (event) {
+                    msStoreIframe.classList.remove("showWindow");
+                    msStoreIframe.classList.add("showFrameFullWindow");
+                    msStore.classList.add("showFullWindow");
+            });
+
+        }
+        else if (msStoreFlag = 1) {
+            msStoreIframe.classList.remove("showWindow");
+            msStore.classList.remove("frame");
+            msStoreFlag = 0;
+        }
+    });
+});
+
+
+
+
 // ----------------------------------
+//power menu setup
+// shut down
+let shutdown = document.querySelector(".shutdown");
+let restart = document.querySelector(".restart");
+let lock = document.querySelector(".lock");
+shutdown.addEventListener("click",()=>{
+    if (confirm("Are you sure???")) {
+        let shuttedDown=document.querySelector('.shuttedDown');
+        shuttedDown.style.display="block";
+        shuttedDown.style.top="0";
+        homeScreen.style.backgroundColor="black";
+        homeScreen.style.display="none";
+        homeScreen.style.opacity="0";
+        msEdge.style.display="none";
+        msStore.style.display="none";
+        document.querySelector(".windowMenu").style.display="none";
+        document.getElementsByTagName(body).style.display="none";
+        shuttedDown.style.transition = "all" + " 2s " + "ease-in-out";
+        
+      }
+})
+// restart
+restart.addEventListener("click",()=>{
+    setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+})
+// lock
+let signInFlag=0;
+lock.addEventListener('click',()=>{
+        signInFlag= 1;
+        lockScreen.style.transition = "all" + " .2s " + "ease-in-out";
+        lockScreen.style.top="0";
+        lockScreen.style.opacity="1";
+        lockScreen.classList.remove("removeLockScreen");
+        if(signInFlag==1){signIn.addEventListener("click", () => {
+            lockScreen.style.top="-100vh";
+            lockScreen.classList.add("removeLockScreen");
+        });
+        }
+});

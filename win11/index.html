@@ -9,6 +9,12 @@
 </head>
 
 <body>
+    <!-- preloader -->
+    <div class="preLoader">
+    <span class="loader">L &nbsp; ading </span><br>
+    <div>Windows 11 by <br> MD. Arif Istiack Prince
+    </div>
+    </div>
     <!-- Home screen section -->
     <div class="homeScreen">
         <div class="wallpaper"><img src="assets/bg.jpeg" alt="background"></div>
@@ -87,9 +93,9 @@
                 <img src="assets/power.png" alt="power">
             </div>
             <div class="powerPopUp">
-                <img src="assets/power.png" alt="power">
-                <img src="assets/restart.png" alt="restart">
-                <img src="assets/lock.png" alt="lock">
+                <img class ="shutdown"src="assets/power.png" alt="power">
+                <img class="restart"src="assets/restart.png" alt="restart">
+                <img class="lock"src="assets/lock.png" alt="lock">
             </div>
         </div>
     </div>
@@ -102,13 +108,22 @@
         </div>
         <iframe class="msIframe"src="https://www.bing.com/" frameborder="0"></iframe>
     </div>
+    <!-- ms store -->
+    <div class="msStoreWindow ">
+        <div class="sideControl">
+            <img class="minus" src="assets/minus.png" alt="minus">
+            <img class="full" src="assets/full.png" alt="full">
+            <img class="cross" src="assets/cross.png" alt="cross">
+        </div>
+        <iframe class="msStoreIframe"src="https://apps.microsoft.com/home?hl=en-US&gl=US" frameborder="0"></iframe>
+    </div>
     <!-- Lock screen function -->
     <div class="lockScreen">
         <div class="lockClock">
             <span class="clock">
-                <span class="h">h</span>
-                <span class="m">m</span>
-                <span class="s">s</span>
+                <span class="h">hour</span>
+                <span class="m">min</span>
+                <span class="s">sec</span>
                 <span class="interval"></span>
             </span><br>
             <span class="dates"></span>
@@ -119,6 +134,10 @@
             <div>MD. Arif Istiack PRinCE</div>
             <button class="signInBtn">Sign in</button>
         </div>
+    </div>
+    <!-- shutting down -->
+    <div class="shuttedDown">
+        <p>THANK YOU! HAVE A NICE DAY...</p>
     </div>
     <!-- --------------------------------- -->
 

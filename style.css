@@ -226,12 +226,9 @@ img {
 }
 }
 
-/* @media screen and (max-width : 548px) {
-    body {
-        display: flex;
-        flex-wrap: wrap;
-        min-height: 100vh;
-        min-width: 100vw;
+ @media screen and (max-width : 548px) {
+    .customCursor{
+        display: none;
     }
-} */
+} 
 /* footer  */

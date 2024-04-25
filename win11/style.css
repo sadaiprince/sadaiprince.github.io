@@ -11,6 +11,8 @@ body{
     overflow: hidden !important;
     position: relative;
 }
+/* testing calculator */
+
 /* pre loader */
 .preLoader{
     height: 100vh !important;
